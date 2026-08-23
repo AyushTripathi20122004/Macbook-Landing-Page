@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macbook landing page</title>
+  <script type="module" crossorigin src="/Macbook-Landing-Page/assets/index-CxieWTK6.js"></script>
+  <link rel="stylesheet" crossorigin href="/Macbook-Landing-Page/assets/index-mhlvtMLI.css">
+</head>
+
+<body>
+  <div class="Main-Container relative bg-black">
+    <nav class="w-full sticky top-0 flex px-5 py-3 z-[999] bg-[#000] justify-between">
+      <div class="nav-logo group">
+        <a href="/" class="inline-block group-hover:-translate-y-0.5 transition-transform duration-300"
+          aria-label="Macbook home">
+          <img src="https://macbook-landing-page-ten.vercel.app/logo.svg">
+        </a>
+      </div>
+      <div class="nav-links lg:flex md:flex hidden gap-6 text-sm ">
+      </div>
+      <div class="nav-actions flex gap-6 text-sm items-center">
+        <div class='group'>
+          <a href="#search"
+            class=" inline-block text-white/90 group-hover:-translate-y-0.5 transition-transform duration-300"
+            aria-label="Search">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="group">
+          <a href="#cart"
+            class=" inline-block text-white/90 group-hover:-translate-y-0.5 transition-transform duration-300"
+            aria-label="Shopping cart">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path>
+              <circle cx="10" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="Main">
+      <!-- intro page -->
+      <div class="intro-page-wrapper ">
+
+        <div class="intro-overlay   py-5 flex flex-col  h-full w-full   text-center text-white">
+          <div class="intro-heading lg:mt-0 md:mt-0 mt-28  flex flex-col items-center">
+            <div class="large-text text-3xl font-semibold tracking-tight">MacBook Pro</div>
+            <img src="https://macbook-landing-page-ten.vercel.app/title.png" alt="MacBook logo"
+              class=" lg:h-[9.4rem] md:h-[9.4rem] w-auto">
+          </div>
+          <div class="intro-video-wrapper flex items-center  w-full">
+            <video class="intro-video block lg:lg:h-70 md:h-70 md:lg:h-70 md:h-70 object-cover w-full" autoplay muted playsinline
+              aria-label="MacBook introduction video">
+              <source src="https://macbook-landing-page-ten.vercel.app/videos/hero.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="intro-action lg:mt-0 md:mt-0 mt-28  flex flex-col items-center gap-3">
+            <button type="button"
+              class="rounded-full bg-[#0071e3] px-6 py-3 font-medium text-white transition-transform hover:bg-white hover:text-black">Buy</button>
+            <div class="small-text text-xl font-semibold tracking-tight  text-white/60">From $1599 or $133/mo for 12
+              months</div>
+          </div>
+        </div>
+      </div>
+      <!-- 3D model of Macbook 14 and 16 -->
+      <div class="Laptop-Models py-20 px-5 ">
+        <div>
+          <h1 class="text-5xl text-white font-semibold tracking-tight">Take a closer look.</h1>
+        </div>
+        <div class="canvas relative">
+          <div
+            class="absolute w-fit inset-x-0 top-[80%] left-1/2 -translate-x-1/2  -translate-y-1/2 z-10 flex flex-col gap-1.5 items-center justify-between px-5">
+            <div class="text-xs text-white">
+              MacbookPro 16" in Silver / Space Black
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex gap-3 rounded-full p-2 border border-white/10 bg-[#262626]">
+                <button type="button" id="blackTextureButton" class="h-6 w-6 rounded-full bg-white" aria-label="White MacBook"></button>
+                <button type="button" id="removeTextureButton" class="h-6 w-6  rounded-full bg-black ring-1 ring-white/40"
+                  aria-label="Black MacBook"></button>
+              </div>
+              <div class="flex gap-2 rounded-full p-2 border border-white/10 bg-[#262626]">
+                <button type="button" class="rounded-full  text-sm text-white">14''</button>
+                <button type="button" class="rounded-full  text-sm text-white">15''</button>
+              </div>
+            </div>
+          </div>
+          <canvas class="w-full h-[80vh] flex items-center " id="Macbook-16"></canvas>
+        </div>
+
+
+      </div>
+
+      <!-- game Video seciton -->
+      <div class="gamingperfomace relative flex  items-center justify-center overflow-hidden bg-black">
+        <video class=" h-full w-full object-cover" autoplay muted loop playsinline
+          aria-label="Gaming performance video">
+          <source src="https://macbook-landing-page-ten.vercel.app/videos/game.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="h-full gaming-Video-Herotext w-full   absolute">
+          <img class="h-full w-full object-cover" src="https://macbook-landing-page-ten.vercel.app/mask-logo.svg" alt=""
+            srcset="">
+        </div>
+      </div>
+
+      <!-- Rocket chip section -->
+      <div class="rocket-chip-section flex w-full   items-center justify-center bg-black px-5 py-20">
+        <div class="rocket-chip-content grid w-full  max-w-3xl p-2 gap-12 md:grid-cols-2 md:items-center">
+          <div class="rocket-chip-copy">
+            <h2 class="text-7xl font-semibold tracking-tight text-white text-nowrap">Rocket Chip</h2>
+            <div class="mt-5 max-w-xs text-base flex flex-col gap-2 leading-relaxed text-white/70">
+
+              <span>
+                Introducing <span class="text-white">M4, the next generation of Apple silicon.</span> M4 powers
+              </span>
+
+              <span>It drives Apple Intelligence on iPad Pro, so you can write, create, and accomplish more with ease.
+                All in a design that’s unbelievably thin, light, and powerful.</span>
+
+              <span>
+                A brand-new display engine delivers breathtaking precision, color accuracy, and brightness. And a
+                next-gen GPU with hardware-accelerated ray tracing brings console-level graphics to your fingertips.
+              </span>
+
+
+
+            </div>
+
+            <a href="#learn-more" class="mt-6 inline-block text-base text-[#0071e3] hover:underline">Learn more about
+              Apple Intelligence</a>
+          </div>
+          <div class="rocket-chip-stats grid gap-4 grid-rows-2">
+            <div class="rocket-chip-stat border-t border-black/20 pt-4">
+              <div class="text-base text-white/60">Up to</div>
+              <h3 class="mt-2 text-4xl font-semibold tracking-tight text-white">4x faster</h3>
+              <div class="mt-2 text-base text-white/60">pro rendering performance than M2</div>
+            </div>
+            <div class="rocket-chip-stat border-t border-black/20 pt-4">
+              <div class="text-base text-white/60">Up to</div>
+              <h3 class="mt-2 text-4xl font-semibold tracking-tight text-white">1.5x faster</h3>
+              <div class="mt-2 text-base text-white/60">CPU performance than M2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- graphics performance -->
+      <div class="graphics-performance relative flex flex-col items-center gap-10 bg-black px-5 py-20 text-white">
+
+        <div class="graphics-performance-text max-w-2xl text-center">
+          <h2 class="text-5xl font-semibold tracking-tight">Next-level graphics performance. Game on.
+          </h2>
+        </div>
+
+        <div class="graphics-performance-visual  z-10 relative h-full w-full max-w-6xl   rounded-3xl">
+          <div class=" grphics-main-image h-full w-full flex items-center justify-center">
+            <img class="  lg:h-[85vh]  object-cover" src="https://macbook-landing-page-ten.vercel.app/performance5.jpg"
+              alt="MacBook Pro graphics performance">
+          </div>
+
+          <div class="absolute  top-0 z-20 flex justify-between h-full w-full   gap-6  p-6  ">
+
+            <div class="relative graphics-left-wing flex w-full flex-col gap-3">
+
+              <div class="lg:h-70 md:h-70  lw-img1 absolute right-0 top-0 z-10">
+                <img class=" w-full h-full rounded-lg object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/performance1.png"
+                  alt="Graphics performance detail 1">
+              </div>
+
+              <div class="lg:h-70 md:h-70 lw-img2 absolute right-14 lg:top-60 top-20 md:top-60 ">
+                <img class="h-full w-full rounded-lg object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/performance6.png"
+                  alt="Graphics performance detail 2">
+              </div>
+
+              <div class="lg:h-70 md:h-70  lw-img3 absolute lg:right-28  md:right-28 z-20 lg:top-90 top-32 md:top-90">
+                <img class="h-full w-full rounded-lg object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/performance7.png"
+                  alt="Graphics performance detail 3">
+              </div>
+
+            </div>
+
+            <div class=" relative graphics-right-wing h-full  w-full">
+              <div class="lg:h-70 md:h-70 rw-img1 absolute  left-0 top-0 z-20 ">
+                <img class=" rounded-lg h-full w-full object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/performance2.png"
+                  alt="Graphics performance detail 4">
+              </div>
+              <div class="lg:h-70 md:h-70 absolute  rw-img2 lg:left-14 left-7 md:left-14 lg:top-40 top-20 md:top-40 z-10 ">
+                <img class=" rounded-lg h-full w-full object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/performance3.png"
+                  alt="Graphics performance detail 5">
+              </div>
+              <div class="lg:h-70 md:h-70   absolute  rw-img3 lg:left-28 left-14 md:left-28  lg:top-80 top-40 md:top-80">
+                <img class="h-full w-full rounded-lg "
+                  src="https://macbook-landing-page-ten.vercel.app/performance4.png"
+                  alt="Graphics performance detail 6">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mt-40 graphics-perfomance-text2 ">
+            <p class=" text-center text-white/40 flex flex-col items-center ">
+              <span class="inline-block max-w-lg">
+                Run graphics-intensive workflows with a responsiveness that keeps up with your imagination. The M4
+                family
+                of chips
+              </span>
+              <span class="max-w-2xl">
+                features a GPU with a second-generation hardware-accelerated ray tracing engine that renders images
+                faster, so <span class="text-white">gaming feels more immersive and realistic than ever.</span> And
+              </span>
+              <span class="max-w-lg">
+                Dynamic Caching optimizes fast on-chip
+                memory to dramatically increase average GPU utilization — driving a huge performance boost for the most
+                demanding pro apps and games.
+              </span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- feature of macbook -->
+      <div class=" mt-20">
+        <div class="feature-heading  text-white text-center">
+          <h2 class="text-5xl font-semibold tracking-tight">
+            See it all in a new light.
+          </h2>
+        </div>
+
+        <!-- feature canvas and details -->
+        <div class="Feauter-details-wrapper relative mx-auto  mt-12 mb-10   max-w-5xl overflow-hidden">
+          <canvas id="Macbook-Model3" class="absolute inset-0 h-[100vh] top-0  w-full"
+            aria-label="MacBook features background"></canvas>
+          <div class="relative z-10 flex min-h-[190vh] flex-col justify-around py-10">
+            <div class="flex features-details w-full justify-start">
+              <div class="flex max-w-sm gap-4 flex-col rounded-2xl  p-4 text-white">
+                <img class="h-10 w-10 rounded-xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/feature-icon1.svg" alt="MacBook performance">
+                <p class="text-white/40 w-xs"><span class="text-white">Email AI. </span>Summarize and draft replies to
+                  emails instantly, so you stay on top of your inbox.</p>
+              </div>
+            </div>
+
+            <div class="flex w-full features-details justify-end">
+              <div class="flex max-w-sm gap-4 flex-col rounded-2xl  p-4 text-white">
+                <img class="h-10 w-10 rounded-xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/feature-icon2.svg" alt="MacBook performance">
+                <p class="text-white/40 w-xs"><span class="text-white">Image AI. </span>Generate or edit images with
+                  ease. Just type what you imagine, and let AI bring it to life.</p>
+              </div>
+            </div>
+
+            <div class="flex w-full features-details justify-start">
+              <div class="flex max-w-sm gap-4 flex-col rounded-2xl  p-4 text-white">
+                <img class="h-10 w-10 rounded-xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/feature-icon3.svg" alt="MacBook performance">
+                <p class="text-white/40 w-xs"><span class="text-white">Summarize AI. </span>Turn long articles, reports,
+                  or notes into clear, bite-sized summaries in seconds.</p>
+              </div>
+            </div>
+
+            <div class="flex w-full features-details justify-end">
+              <div class="flex max-w-sm gap-4 flex-col rounded-2xl  p-4 text-white">
+                <img class="h-10 w-10 rounded-xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/feature-icon4.svg">
+                <p class="text-white/40 w-xs"><span class="text-white">AirDrop. </span>Wirelessly share photos, large
+                  files, and more between your iPhone, your Mac, & other devices.</p>
+              </div>
+            </div>
+
+            <div class="flex w-full justify-start">
+              <div class="flex max-w-sm gap-4 features-details flex-col rounded-2xl  p-4 text-white">
+                <img class="h-10 w-10 rounded-xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/feature-icon5.svg">
+                <p class="text-white/40 w-xs"><span class="text-white">Writing Tool. </span>Write smarter and faster,
+                  whether it’s blogs, essays, or captions, AI helps polish your words.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- upgrade section -->
+      <div class="px-5">
+        <div class="text-white w-full flex flex-col items-center">
+          <h2 class="text-6xl max-w-2xl text-center font-semibold">There’s never been a better time to upgrade.</h2>
+          <p class="text-center text-2xl mt-10 font-semibold">Here’s what you get with the new MacBook Pro.</p>
+        </div>
+
+
+        <div class="upgrade-details gap-6 mt-10 lg:grid lg:grid-cols-2 flex flex-col ">
+          <!-- left wing -->
+          <div class="Ud-left-section gap-6 flex flex-col flex-2 ">
+            <div class="relative  overflow-hidden rounded-3xl">
+              <div class="h-80">
+                <img class="w-full rounded-3xl object-cover"
+                  src="https://macbook-landing-page-ten.vercel.app/highlight-bg.png" alt="MacBook Pro">
+              </div>
+              <div class="absolute bottom-4 left-4 flex flex-col  rounded-2xl p-3 text-white ">
+                <div>
+                  <img class="h-20 rounded-xl object-cover" src="https://macbook-landing-page-ten.vercel.app/laptop.png"
+                    alt="Apple Intelligence">
+                </div>
+                <p class="text-3xl tracking-tighter   font-semibold">Fly through <br> demanding tasks up <br>to 9.8x
+                  faster</p>
+              </div>
+            </div>
+
+            <div class=" p-3 flex gap-4 items-center  bg-[#1D1D1F] flex-1 overflow-hidden rounded-3xl text-white">
+              <div>
+                <img class="h-28 rounded-3xl object-cover" src="https://macbook-landing-page-ten.vercel.app/sun.png"
+                  alt="MacBook Pro display">
+              </div>
+              <p class="mt-4  text-xl font-semibold">A stunning <br>
+                Liquid Retina XDR <br>
+                display.</p>
+            </div>
+
+          </div>
+
+          <!-- right wing -->
+          <div class="Ud-right-section flex gap-6 flex-col flex-2 ">
+            <div class="bg-linear-to-r from-blue-500 via-80% via-pink-500 to-orange-500  rounded-3xl p-1">
+              <div class="p-3 flex gap-4 items-center  bg-[#1D1D1F] flex-1 overflow-hidden rounded-3xl text-white">
+                <div>
+                  <img class="h-28 rounded-3xl object-cover" src="https://macbook-landing-page-ten.vercel.app/ai.png"
+                    alt="MacBook Pro display">
+                </div>
+                <p class="mt-4  text-xl font-semibold">
+                  Built for <br>
+                  <span
+                    class="bg-linear-to-r from-blue-500 via-80% via-pink-500 to-orange-500 bg-clip-text text-transparent">Apple
+                    Intelligence.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden flex items-end rounded-3xl bg-[#1D1D1F] h-80">
+              <div class=" flex flex-col rounded-2xl  p-3 text-white backdrop-blur-sm">
+                <div>
+                  <img class="h-20 rounded-xl object-cover"
+                    src="https://macbook-landing-page-ten.vercel.app/battery.png" alt="Apple Intelligence">
+                </div>
+                <p class="text-3xl font-medium">
+                  Up to
+                  <span class="bg-clip-text bg-linear-to-r from-green-600 to-lime-400 text-transparent">14 more hours</span> <br>
+                  battery life.
+                  <span class="text-white/40">
+                    (Up to 24 <br> hours total.)
+                  </span>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <footer class="lg:mt-40 md:mt-40 lg:mb-3 md:mb-3">
+      <div class="flex items-center justify-between border-b border-white/40 px-6 py-4 text-white">
+        <p class="text-xs text-white/60">More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</p>
+        <div><img src="https://macbook-landing-page-ten.vercel.app/logo.svg" alt=""></div>
+      </div>
+      <div class="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center justify-between gap-4 px-6 py-4 text-xs text-white/60">
+        <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
+        <div class="flex transition-all duration-300 lg:flex-row md:flex-row flex-col lg:gap-0 md:gap-0 gap-2 " aria-label="Footer links">
+          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Terms and Conditions</a>
+          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Sales policy</a>
+          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Legal</a>
+          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4">Site Map</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
