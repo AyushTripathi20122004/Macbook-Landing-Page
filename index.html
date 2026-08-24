@@ -55,8 +55,8 @@
               class=" lg:h-[9.4rem] md:h-[9.4rem] w-auto">
           </div>
           <div class="intro-video-wrapper flex items-center  w-full">
-            <video class="intro-video block lg:lg:h-70 md:h-70 md:lg:h-70 md:h-70 object-cover w-full" autoplay muted playsinline
-              aria-label="MacBook introduction video">
+            <video class="intro-video block lg:lg:h-70 md:h-70 md:lg:h-70 md:h-70 object-cover w-full" autoplay muted
+              playsinline aria-label="MacBook introduction video">
               <source src="https://macbook-landing-page-ten.vercel.app/videos/hero.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -76,15 +76,16 @@
         </div>
         <div class="canvas relative">
           <div
-            class="absolute w-fit inset-x-0 top-[80%] left-1/2 -translate-x-1/2  -translate-y-1/2 z-10 flex flex-col gap-1.5 items-center justify-between px-5">
+            class="absolute w-fit  z-20 inset-x-0 top-[80%] left-1/2 -translate-x-1/2  -translate-y-1/2 z-10 flex flex-col gap-1.5 items-center justify-between px-5">
             <div class="text-xs text-white">
               MacbookPro 16" in Silver / Space Black
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center  gap-4">
               <div class="flex gap-3 rounded-full p-2 border border-white/10 bg-[#262626]">
-                <button type="button" id="blackTextureButton" class="h-6 w-6 rounded-full bg-white" aria-label="White MacBook"></button>
-                <button type="button" id="removeTextureButton" class="h-6 w-6  rounded-full bg-black ring-1 ring-white/40"
-                  aria-label="Black MacBook"></button>
+                <button type="button" id="blackTextureButton" class="h-6 w-6 rounded-full bg-white"
+                  aria-label="White MacBook"></button>
+                <button type="button" id="removeTextureButton"
+                  class="h-6 w-6  rounded-full bg-black ring-1 ring-white/40" aria-label="Black MacBook"></button>
               </div>
               <div class="flex gap-2 rounded-full p-2 border border-white/10 bg-[#262626]">
                 <button type="button" class="rounded-full  text-sm text-white">14''</button>
@@ -92,10 +93,21 @@
               </div>
             </div>
           </div>
-          <canvas class="w-full h-[80vh] flex items-center " id="Macbook-16"></canvas>
+          <div class="relative w-full h-[80vh]">
+
+            <!-- Three.js Canvas -->
+            <canvas id="Macbook-16" class="w-full h-full">
+            </canvas>
+
+            <!-- Div over the Canvas -->
+            <div  id="macbook-overlay" class="absolute top-0 left-0 w-full h-full z-10 ">
+
+              <!-- Your content here -->
+
+            </div>
+
+          </div>
         </div>
-
-
       </div>
 
       <!-- game Video seciton -->
@@ -196,12 +208,14 @@
                   src="https://macbook-landing-page-ten.vercel.app/performance2.png"
                   alt="Graphics performance detail 4">
               </div>
-              <div class="lg:h-70 md:h-70 absolute  rw-img2 lg:left-14 left-7 md:left-14 lg:top-40 top-20 md:top-40 z-10 ">
+              <div
+                class="lg:h-70 md:h-70 absolute  rw-img2 lg:left-14 left-7 md:left-14 lg:top-40 top-20 md:top-40 z-10 ">
                 <img class=" rounded-lg h-full w-full object-cover"
                   src="https://macbook-landing-page-ten.vercel.app/performance3.png"
                   alt="Graphics performance detail 5">
               </div>
-              <div class="lg:h-70 md:h-70   absolute  rw-img3 lg:left-28 left-14 md:left-28  lg:top-80 top-40 md:top-80">
+              <div
+                class="lg:h-70 md:h-70   absolute  rw-img3 lg:left-28 left-14 md:left-28  lg:top-80 top-40 md:top-80">
                 <img class="h-full w-full rounded-lg "
                   src="https://macbook-landing-page-ten.vercel.app/performance4.png"
                   alt="Graphics performance detail 6">
@@ -356,7 +370,8 @@
                 </div>
                 <p class="text-3xl font-medium">
                   Up to
-                  <span class="bg-clip-text bg-linear-to-r from-green-600 to-lime-400 text-transparent">14 more hours</span> <br>
+                  <span class="bg-clip-text bg-linear-to-r from-green-600 to-lime-400 text-transparent">14 more
+                    hours</span> <br>
                   battery life.
                   <span class="text-white/40">
                     (Up to 24 <br> hours total.)
@@ -374,16 +389,26 @@
     </div>
     <footer class="lg:mt-40 md:mt-40 lg:mb-3 md:mb-3">
       <div class="flex items-center justify-between border-b border-white/40 px-6 py-4 text-white">
-        <p class="text-xs text-white/60">More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</p>
+        <p class="text-xs text-white/60">More ways to shop: Find an Apple Store or other retailer near you. Or call
+          000800 040 1966.</p>
         <div><img src="https://macbook-landing-page-ten.vercel.app/logo.svg" alt=""></div>
       </div>
-      <div class="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center justify-between gap-4 px-6 py-4 text-xs text-white/60">
+      <div
+        class="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center justify-between gap-4 px-6 py-4 text-xs text-white/60">
         <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
-        <div class="flex transition-all duration-300 lg:flex-row md:flex-row flex-col lg:gap-0 md:gap-0 gap-2 " aria-label="Footer links">
-          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Terms and Conditions</a>
-          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Sales policy</a>
-          <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Legal</a>
+        <div class="flex transition-all duration-300 lg:flex-row md:flex-row flex-col lg:gap-0 md:gap-0 gap-2 "
+          aria-label="Footer links">
+          <a href="#"
+            class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Privacy
+            Policy</a>
+          <a href="#"
+            class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Terms
+            and Conditions</a>
+          <a href="#"
+            class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Sales
+            policy</a>
+          <a href="#"
+            class="hover:text-white transition-all duration-300 lg:px-4 md:px-4 lg:border-r md:border-r border-white/80">Legal</a>
           <a href="#" class="hover:text-white transition-all duration-300 lg:px-4 md:px-4">Site Map</a>
         </div>
       </div>

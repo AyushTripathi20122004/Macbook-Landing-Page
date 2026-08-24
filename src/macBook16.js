@@ -47,30 +47,34 @@ controls.enableRotate = false;
 controls.enableDamping = false;
 controls.update();
 
+const overlay = document.querySelector('#macbook-overlay');
+
 let macbookModelObject = null;
 
 let isDraggingMacbook = false;
 let lastMouseX = 0;
 let lastMouseY = 0;
 
-canvas.addEventListener('mousedown', (event) => {
-    if (!macbookModelObject) {
-        return;
-    }
+overlay.addEventListener('mousedown', (event) => {
+
+    if (!macbookModelObject) return;
 
     isDraggingMacbook = true;
+
     lastMouseX = event.clientX;
     lastMouseY = event.clientY;
-    canvas.style.cursor = 'grabbing';
+
+    overlay.style.cursor = 'grabbing';
 });
 
+
 window.addEventListener('mousemove', (event) => {
-    if (!isDraggingMacbook || !macbookModelObject) {
-        return;
-    }
+
+    if (!isDraggingMacbook || !macbookModelObject) return;
 
     const deltaX = event.clientX - lastMouseX;
     const deltaY = event.clientY - lastMouseY;
+
     lastMouseX = event.clientX;
     lastMouseY = event.clientY;
 
@@ -83,24 +87,25 @@ window.addEventListener('mousemove', (event) => {
     });
 });
 
-window.addEventListener('mouseup', () => {
-    isDraggingMacbook = false;
-    canvas.style.cursor = 'grab';
 
-    if (macbookModelObject) {
-        gsap.to(macbookModelObject.rotation, {
-            x: THREE.MathUtils.degToRad(14),
-            y: 0,
-            z: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        });
-    }
+window.addEventListener('mouseup', () => {
+
+    if (!isDraggingMacbook) return;
+
+    isDraggingMacbook = false;
+
+    overlay.style.cursor = 'grab';
+
+    gsap.to(macbookModelObject.rotation, {
+        x: THREE.MathUtils.degToRad(14),
+        y: 0,
+        z: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
 });
 
-canvas.style.cursor = 'grab';
-
-
+overlay.style.cursor = 'grab';
 // --------------------------------------------------
 // RENDERER
 // --------------------------------------------------
@@ -108,7 +113,7 @@ canvas.style.cursor = 'grab';
 const renderer = new THREE.WebGLRenderer({
     canvas,
     antialias: true,
-    alpha: true
+    alpha: false
 });
 
 renderer.setPixelRatio(
@@ -131,7 +136,7 @@ bottomLeftLight.position.set(-4, -3, 3);
 scene.add(bottomLeftLight);
 
 const backLight = new THREE.DirectionalLight(0xffffff, 1);
-backLight.position.set(0, -2,0);
+backLight.position.set(0, -2, 0);
 scene.add(backLight);
 
 
